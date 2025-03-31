@@ -42,8 +42,8 @@ app.get("/", (req, res) => {
     success: true,
     message: "Data retrieved successfully.",
     Apis: {
-      Products: "",
-      Categories: "",
+      Products: "https://uniformexplorerbackend.onrender.com/products",
+      Categories: "https://uniformexplorerbackend.onrender.com/categories",
     },
   });
 });
