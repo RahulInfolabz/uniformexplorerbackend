@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const connectDb = require("./Db/connectDb");
-const fetchAllProducts = require("./Apis/User/Products/fetchallproducts");
+const fetchAllProducts = require("./Apis/User/Products/fetchAllProducts");
 const insertProducts = require("./Apis/Admin/Products/insertProducts");
 const insertProduct = require("./Apis/Admin/Products/insertProduct");
 const insertCategories = require("./Apis/Admin/Category/inserCategories");
@@ -9,7 +9,7 @@ const fetchAllCategories = require("./Apis/User/Category/fetchAllCategories");
 const insertCategory = require("./Apis/Admin/Category/insertCategory");
 require("dotenv").config();
 
-// create app
+  // create app
 const app = express();
 const PORT = process.env.PORT;
 
