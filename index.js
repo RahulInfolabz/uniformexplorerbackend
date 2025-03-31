@@ -9,7 +9,7 @@ const fetchAllCategories = require("./Apis/User/Category/fetchAllCategories");
 const insertCategory = require("./Apis/Admin/Category/insertCategory");
 require("dotenv").config();
 
-  // create app
+// create app
 const app = express();
 const PORT = process.env.PORT;
 
@@ -33,10 +33,6 @@ app.use(
 connectDb();
 
 // user
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "Server Connected" });
-});
-
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
