@@ -51,7 +51,6 @@ app.get("/categories", fetchAllCategories);
 app.get("/category/:category_id", fetchProductsByCategory);
 app.get("/products/:product_id", fetchProductById);
 
-
 // admin
 app.post("/insertProducts", insertProducts);
 app.post("/insertProduct", insertProduct);
