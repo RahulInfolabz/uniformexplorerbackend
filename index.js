@@ -9,7 +9,12 @@ const fetchAllCategories = require("./Apis/User/Category/fetchAllCategories");
 const insertCategory = require("./Apis/Admin/Category/insertCategory");
 const fetchProductsByCategory = require("./Apis/User/Category/fetchProductsByCategory");
 const fetchProductById = require("./Apis/User/Products/fetchProductsById");
-const { AddContactInquiry } = require("./Apis/User/Products/storeContactInqiry");
+const {
+  AddContactInquiry,
+} = require("./Apis/User/Products/storeContactInqiry");
+const {
+  AddProductInquiry,
+} = require("./Apis/User/Products/storeProductInquiry");
 require("dotenv").config();
 
 // create app
@@ -51,8 +56,8 @@ app.get("/products", fetchAllProducts);
 app.get("/categories", fetchAllCategories);
 app.get("/category/:category_id", fetchProductsByCategory);
 app.get("/products/:product_id", fetchProductById);
-app.post("/storeContactInquiry", AddContactInquiry)
-
+app.post("/storeContactInquiry", AddContactInquiry);
+app.post("/storeProductInquiry", AddProductInquiry);
 
 // admin
 app.post("/insertProducts", insertProducts);
